@@ -185,7 +185,7 @@ def detectCoins(visual, picture):
 
             # detect circles in the image
             circles = cv.HoughCircles(thresh, cv.HOUGH_GRADIENT, dp=1.10, minDist=80, \
-                                      param1=200, param2=177, maxRadius=200, minRadius=80)
+                                      param1=200, param2=87, maxRadius=200, minRadius=80)
 
             # ensure at least some circles were found
             if circles is not None:
@@ -282,7 +282,7 @@ def detectCoins(visual, picture):
             cv.imwrite('before-after.jpeg', before_after)
             cv.imshow('before-after', cv.resize(before_after, (before_after.shape[1] // 2, before_after.shape[0] // 2)))
 
-            textToSpeech(coins_found)
+            #textToSpeech(coins_found)
 
             return coins_found
     #Not coins
@@ -963,7 +963,7 @@ def GUI(visual):
 
     buttonFont = font.Font(family='Helvetica', size=16)
 
-    coins = ['test/1.jpg']
+    coins = ['test/2.jpg']
     #Checks the classifier status
     tk.Button(root, font=buttonFont, text="status", command=lambda: statusClass(visual),width=8,height=1).pack()
     #Trains a new custom classifier using the zips in the train folder
@@ -971,7 +971,7 @@ def GUI(visual):
     #Opens a GUI which allows to change the OpenCV values and find the "perfect ones"
     tk.Button(root, font=buttonFont, text="test", command=lambda: houghCircles(visual,coins),width=8,height=1).pack()
     #Sends the picture taken with the "TakePicture" method to the Visual Recognition classifier.
-    tk.Button(root, font=buttonFont, text="classify", command=lambda: detectCoins(visual,'test/1.jpg'),width=8,height=1).pack()
+    tk.Button(root, font=buttonFont, text="classify", command=lambda: detectCoins(visual,'test/2.jpg'),width=8,height=1).pack()
     #Takes a new picture using the Camera Module
     tk.Button(root, font=buttonFont, text="Take picture", command=lambda: takePicture(), width=8, height=1).pack()
     #Opens a GUI with default values and allows to classify the picture.
