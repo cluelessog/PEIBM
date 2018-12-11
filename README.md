@@ -167,3 +167,6 @@ Example Response
 ```python
 visual.delete_classifier(ID)
 ```
+# Common Error
+There is this common error I have faced a number of times and it's internal to the IBM cloud API. Here is the screenshot of error and it gets resolved on it's own  
+![picture alt](https://github.com/sourabhkumar0308/PEIBM/blob/master/error.png "Top Half is the error message")
