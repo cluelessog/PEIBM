@@ -38,15 +38,15 @@ This is the structure of directory
 * classify.png
 * error.png
 * Main Folder (EuroCoins or Indian Coins)  
-              * Credentials (folder)  
-                  * wastson_credentials.json (file)  
-              * pe (python enviroment folder)  
-              * results (folder)  
-              * test (test images folder)  
-              * train (training images folder)  
-                  * zips  
-                      * zipped folders containing training images  
-              * detector.py (file)  
+  * Credentials (folder)  
+    * wastson_credentials.json (file)  
+  * pe (python enviroment folder)  
+  * results (folder)  
+  * test (test images folder)  
+  * train (training images folder)  
+  * zips  
+       * zipped folders containing training images  
+  * detector.py (file)  
 
 # Credentials
 The credentials folder contains a JSON file that has structure for proper credentials file. Replace the __url__ and __iam_apikey__ with your own.
