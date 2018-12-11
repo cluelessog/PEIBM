@@ -33,3 +33,6 @@ source bin/activate
 __Note__ : Make sure that you first create the virtual enviroment and then install the dependencies from __requirements.txt__ file.
 # Credentials
 The credentials folder contains a JSON file that has structure for proper credentials file. Replace the __url__ and __iam_apikey__ with your own.
+
+## API Usage guide
+# Authentication
