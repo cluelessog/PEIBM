@@ -19,6 +19,17 @@ To install the dependencies, execute the following command:
 ~~~
 pip install -r requirements.txt
 ~~~
+After installing python, it is a good practice to create a virtual environment  
+~~~
+python3.6 -m virtualenv <name_folder>
 
+#To "enter" in the virtualenv
+cd <name_folder>
+source bin/activate
 
-
+#Now, the begginning of your prompt will look like:
+(name_folder) user@machine $>
+~~~
+__Note__ : Make sure that you first create the virtual enviroment and then install the dependencies from __requirements.txt__ file.
+# Credentials
+The credentials folder contains a JSON file that has structure for proper credentials file. Replace the __url__ and __iam_apikey__ with your own.
