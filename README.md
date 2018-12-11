@@ -124,6 +124,10 @@ Perform classification task once you have trained the classifier as shown above.
 result = visual.classify(images_file=image, classifier_ids=ID,accept_language=language).get_result()
 print(json.dumps(result, indent=2))
 ```
+To get the classifier ID from JSON credential file, use the following statement  
+```python
+ID = json.load(open('credentials'+os.sep+'watson_credentials.json', 'r'))['visual']['classifier']
+```
 ## Status Of Classifier and Deleting the classifier
 The following statements gives the status of classifier and deletes the classifier.
 ```python
@@ -163,3 +167,8 @@ Example Response
 ```python
 visual.delete_classifier(ID)
 ```
+# Common Error
+There is this common error I have faced a number of times and it's internal to the IBM cloud API. Here is the screenshot of error and it gets resolved on it's own. The top half of image is the error log.  
+![picture alt](https://github.com/sourabhkumar0308/PEIBM/blob/master/error.png "Top Half is the error message")
+# JSON response after classification
+![picture alt](https://github.com/sourabhkumar0308/PEIBM/blob/master/classify.png "Classification Response")
