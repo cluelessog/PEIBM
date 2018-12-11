@@ -55,7 +55,7 @@ from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
 visual = VisualRecognition(version='{version}',url='{url}',iam_apikey='{apikey}')
 ```
 ## Creating a custom classifier
-This section shows how to train a custom classifier. The __print__ command prints the model details like classes, classifier id etc. __os.sep__ is basically __/__.
+This section shows how to train a custom classifier. The __print__ command prints the model details like classes, classifier id etc.
 ```python
 import json
 from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
@@ -110,12 +110,6 @@ Perform classification task once you have trained the classifier as shown above.
 ```python
 result = visual.classify(images_file=image, classifier_ids=ID,accept_language=language).get_result()
 print(json.dumps(result, indent=2))
-```
-__NOTE__ : You have to manaully copy the classifier ID into the credentials file after training returns the ID.  
-
-To get Classifier ID from the credentials file use the following command  
-```python
-ID = json.load(open('credentials'+os.sep+'watson_credentials.json', 'r'))['visual']['classifier']
 ```
 ## Status Of Classifier and Deleting the classifier
 The following statements gives the status of classifier and deletes the classifier.
