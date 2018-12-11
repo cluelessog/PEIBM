@@ -176,8 +176,8 @@ There is this common error I have faced a number of times and it's internal to t
 # Detection Results for Euro Coins
 <img align="left" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/EuroCoins/results/demo.png">
 
-<img align="right" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/EuroCoins/results/result1.jpeg">
+<img align="right" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/EuroCoins/results/result1.jpeg">  
 <br clear="all" />
-<img align="left" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/EuroCoins/results/result2.png">
+<img align="left" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/EuroCoins/results/result2.png">  
 
 <br clear="all" />
