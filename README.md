@@ -31,6 +31,8 @@ source bin/activate
 (name_folder) user@machine $>
 ~~~
 __Note__ : Make sure that you first create the virtual enviroment and then install the dependencies from __requirements.txt__ file.
+# Directory Structure
+
 # Credentials
 The credentials folder contains a JSON file that has structure for proper credentials file. Replace the __url__ and __iam_apikey__ with your own.
 
@@ -38,15 +40,82 @@ The credentials folder contains a JSON file that has structure for proper creden
 ## Authentication
 To authenticate using credentials file  
 ```python
+import json
 from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
 creds = json.load(open('credentials'+os.sep+'watson_credentials.json', 'r'))['visual']
 url = creds['url']
 api_key = creds['iam_apikey']
-visual_recognition = VisualRecognition(url=url, iam_apikey=api_key)
+visual = VisualRecognition(url=url, iam_apikey=api_key)
 ```
 There is an optional version parameter (__'version=YYYY-MM-DD'__) taken by __VisualRecognition()__ to use the API version for the date specified.
 To authenticate without credentials file
 ```python
+import json
 from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
-visual_recognition = VisualRecognition(version='{version}',url='{url}',iam_apikey='{apikey}')
+visual = VisualRecognition(version='{version}',url='{url}',iam_apikey='{apikey}')
+```
+## Creating a custom classifier
+This section shows how to train a custom classifier. The __print__ command prints the model details like classes, classifier id etc.
+```python
+import json
+from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
+creds = json.load(open('credentials'+os.sep+'watson_credentials.json', 'r'))['visual']
+url = creds['url']
+api_key = creds['iam_apikey']
+visual = VisualRecognition(url=url, iam_apikey=api_key)
+with open('train'+os.sep+'zips'+os.sep+'mixed.zip', 'rb') as coin,\
+            open('train'+os.sep+'zips'+os.sep+'rupee1.zip', 'rb') as rupee1, \
+            open('train'+os.sep+'zips'+os.sep+'rupee2.zip', 'rb') as rupee2, \
+            open('train'+os.sep+'zips'+os.sep+'rupee5.zip', 'rb') as rupee5, \
+            open('train'+os.sep+'zips'+os.sep+'rupee10.zip','rb') as rupee10, \
+            open('train'+os.sep+'zips'+os.sep+'notCoins.zip', 'rb') as notCoins:
+        
+        model = visual.create_classifier('rupees',coin_positive_examples=coin, rupee1_positive_examples=rupee1,\
+                                                 rupee2_positive_examples=rupee2,rupee5_positive_examples=rupee5,\
+                                                 rupee10_positive_examples=rupee10,\
+                                                 negative_examples=notCoins).get_result()
+        print(json.dumps(model, indent=2))
+```
+Example Response after training  
+```
+{
+  "classifier_id": "rupees_1335655757",
+  "name": "rupees",
+  "status": "ready",
+  "owner": "3d6cee2f-6c17-4ce6-b684-0b4617ce6916",
+  "created": "2018-12-10T14:19:20.940Z",
+  "updated": "2018-12-10T14:19:20.940Z",
+  "classes": [
+    {
+      "class": "rupee5"
+    },
+    {
+      "class": "rupee2"
+    },
+    {
+      "class": "rupee1"
+    },
+    {
+      "class": "coin"
+    },
+    {
+      "class": "rupee10"
+    }
+  ],
+  "core_ml_enabled": true
+}
+```
+## Classification
+To do the classification task once you have trained the classifier as shown above
+```
+result = visual.classify(images_file=image, classifier_ids=params,accept_language=language).get_result()
+print(json.dumps(result, indent=2))
+```
+## Status Of Classifier and Deleting the classifier
+The following statements gives the status of classifier and deletes the classifier. __ID__ is the id returned after training the classifer.
+```
+print(json.dumps(visual.get_classifier(classifier_id=ID).get_result(), indent=2))
+```
+```
+print(visual.delete_classifier(ID))
 ```
