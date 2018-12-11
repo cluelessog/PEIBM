@@ -183,11 +183,11 @@ There is this common error I have faced a number of times and it's internal to t
 <br clear="all" />
 
 # Detection Results for Indian Coins
-<img align="left" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/demo.png">
+<img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/demo.png">  
 
-<img align="right" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/test.png">  
+<img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/test.png">    
 <br clear="all" />
-<img align="left" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/result1.jpeg">  
-<img align="right" width="400" height="400" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/result2.jpeg">  
+<img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/result1.jpeg">    
+<img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/result2.jpeg">    
 
 <br clear="all" />
