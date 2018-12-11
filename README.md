@@ -77,7 +77,7 @@ with open('train'+os.sep+'zips'+os.sep+'mixed.zip', 'rb') as coin,\
         print(json.dumps(model, indent=2))
 ```
 Example Response after training  
-```
+```json
 {
   "classifier_id": "rupees_1335655757",
   "name": "rupees",
@@ -106,16 +106,17 @@ Example Response after training
 }
 ```
 ## Classification
-To do the classification task once you have trained the classifier as shown above
-```
-result = visual.classify(images_file=image, classifier_ids=params,accept_language=language).get_result()
+Perform classification task once you have trained the classifier as shown above. __ID__ is the id returned after training the classifer.
+```python
+result = visual.classify(images_file=image, classifier_ids=ID,accept_language=language).get_result()
 print(json.dumps(result, indent=2))
 ```
 ## Status Of Classifier and Deleting the classifier
-The following statements gives the status of classifier and deletes the classifier. __ID__ is the id returned after training the classifer.
+The following statements gives the status of classifier and deletes the classifier.
+```python
+classifier = visual_recognition.get_classifier(classifier_id=ID).get_result()
+print(json.dumps(classifier, indent=2))
 ```
-print(json.dumps(visual.get_classifier(classifier_id=ID).get_result(), indent=2))
-```
-```
-print(visual.delete_classifier(ID))
+```python
+visual.delete_classifier(ID)
 ```
