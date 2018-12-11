@@ -172,3 +172,6 @@ There is this common error I have faced a number of times and it's internal to t
 ![picture alt](https://github.com/sourabhkumar0308/PEIBM/blob/master/error.png "Top Half is the error message")
 # JSON response after classification
 ![picture alt](https://github.com/sourabhkumar0308/PEIBM/blob/master/classify.png "Classification Response")
+
+# Detection Results for Euro Coins
+<img align="left" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/EuroCoins/results/demo.png">
