@@ -44,8 +44,8 @@ This is the structure of directory
   * results (folder)  
   * test (test images folder)  
   * train (training images folder)  
-  * zips  
-       * zipped folders containing training images  
+    * zips  
+     * zipped folders containing training images  
   * detector.py (file)  
 
 # Credentials
