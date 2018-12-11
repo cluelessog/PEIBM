@@ -124,6 +124,10 @@ Perform classification task once you have trained the classifier as shown above.
 result = visual.classify(images_file=image, classifier_ids=ID,accept_language=language).get_result()
 print(json.dumps(result, indent=2))
 ```
+To get the classifier ID from JSON credential file, use the following statement  
+```python
+ID = json.load(open('credentials'+os.sep+'watson_credentials.json', 'r'))['visual']['classifier']
+```
 ## Status Of Classifier and Deleting the classifier
 The following statements gives the status of classifier and deletes the classifier.
 ```python
