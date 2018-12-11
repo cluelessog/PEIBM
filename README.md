@@ -168,5 +168,7 @@ Example Response
 visual.delete_classifier(ID)
 ```
 # Common Error
-There is this common error I have faced a number of times and it's internal to the IBM cloud API. Here is the screenshot of error and it gets resolved on it's own  
+There is this common error I have faced a number of times and it's internal to the IBM cloud API. Here is the screenshot of error and it gets resolved on it's own. The top half of image is the error log.  
 ![picture alt](https://github.com/sourabhkumar0308/PEIBM/blob/master/error.png "Top Half is the error message")
+# JSON response after classification
+![picture alt](https://github.com/sourabhkumar0308/PEIBM/blob/master/classify.png "Classification Response")
