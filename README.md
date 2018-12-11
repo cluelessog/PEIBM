@@ -117,6 +117,36 @@ The following statements gives the status of classifier and deletes the classifi
 classifier = visual_recognition.get_classifier(classifier_id=ID).get_result()
 print(json.dumps(classifier, indent=2))
 ```
+Example Response  
+```json
+{
+  "classifier_id": "rupees_1335655757",
+  "name": "rupees",
+  "status": "ready",
+  "owner": "3d6cee2f-6c17-4ce6-b684-0b4617ce6916",
+  "created": "2018-12-10T14:19:20.940Z",
+  "updated": "2018-12-10T14:19:20.940Z",
+  "classes": [
+    {
+      "class": "rupee5"
+    },
+    {
+      "class": "rupee2"
+    },
+    {
+      "class": "rupee1"
+    },
+    {
+      "class": "coin"
+    },
+    {
+      "class": "rupee10"
+    }
+  ],
+  "core_ml_enabled": true
+}
+
+```
 ```python
 visual.delete_classifier(ID)
 ```
