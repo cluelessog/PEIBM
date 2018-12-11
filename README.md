@@ -36,3 +36,17 @@ The credentials folder contains a JSON file that has structure for proper creden
 
 # API Usage guide
 ## Authentication
+To authenticate using credentials file  
+```python
+from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
+creds = json.load(open('credentials'+os.sep+'watson_credentials.json', 'r'))['visual']
+url = creds['url']
+api_key = creds['iam_apikey']
+visual_recognition = VisualRecognition(url=url, iam_apikey=api_key)
+```
+There is an optional version parameter (__'version=YYYY-MM-DD'__) taken by __VisualRecognition()__ to use the API version for the date specified.
+To authenticate without credentials file
+```python
+from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
+visual_recognition = VisualRecognition(version='{version}',url='{url}',iam_apikey='{apikey}')
+```
