@@ -32,6 +32,21 @@ source bin/activate
 ~~~
 __Note__ : Make sure that you first create the virtual enviroment and then install the dependencies from __requirements.txt__ file.
 # Directory Structure
+This is the structure of directory 
+* Readme.md
+* requirements.txt
+* classify.png
+* error.png
+* Main Folder (EuroCoins or Indian Coins)
+              * Credentials (folder)
+                  * wastson_credentials.json (file)
+              * pe (python enviroment folder)
+              * results (folder)
+              * test (test images folder)
+              * train (training images folder)
+                  * zips
+                      * zipped folders containing training images
+              * detector.py (file)
 
 # Credentials
 The credentials folder contains a JSON file that has structure for proper credentials file. Replace the __url__ and __iam_apikey__ with your own.
@@ -183,10 +198,8 @@ There is this common error I have faced a number of times and it's internal to t
 <br clear="all" />
 
 # Detection Results for Indian Coins
-<img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/demo.png">  
-
-<img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/test.png">    
 <br clear="all" />
+<img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/demo.png">      
 <img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/result1.jpeg">    
 <img align="center" src="https://github.com/sourabhkumar0308/PEIBM/blob/master/IndiaCoins/results/result2.jpeg">    
 
