@@ -55,7 +55,7 @@ from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
 visual = VisualRecognition(version='{version}',url='{url}',iam_apikey='{apikey}')
 ```
 ## Creating a custom classifier
-This section shows how to train a custom classifier. The __print__ command prints the model details like classes, classifier id etc. __os.sep__ is basically ___/___.
+This section shows how to train a custom classifier. The __print__ command prints the model details like classes, classifier id etc. __os.sep__ is basically __/'__.
 ```python
 import json
 from watson_developer_cloud import VisualRecognitionV3 as VisualRecognition
