@@ -83,7 +83,7 @@ systemd-python==234
 tensorflow==1.15.2
 tensorflow-tensorboard==1.5.1
 tornado==5.1
-Twisted==18.7.0
+Twisted==19.7.0
 txaio==18.8.1
 unity-scope-calculator==0.1
 unity-scope-chromiumbookmarks==0.1
