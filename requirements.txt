@@ -48,7 +48,7 @@ oauth==1.0.1
 oauthlib==2.0.1
 olefile==0.44
 opencv-contrib-python==3.4.2.17
-opencv-python==3.4.2.17
+opencv-python==3.4.7.28
 pexpect==4.2.1
 Pillow==8.3.2
 ply==3.11
