@@ -80,7 +80,7 @@ simplejson==3.11.1
 six==1.11.0
 sporco==0.1.10b1
 systemd-python==234
-tensorflow==2.5.3
+tensorflow==2.9.3
 tensorflow-tensorboard==1.5.1
 tornado==5.1
 Twisted==22.1.0
